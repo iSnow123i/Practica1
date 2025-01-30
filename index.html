@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Styles/style_index.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="modal" id="modal-error">
+            <div class="modal-container">
+                <form action="#" name="card-form">
+                    <h3>Ingreso Tarjeta</h3>
+                    <label for="title">Titulo</label>
+                    <input
+                        type="text"
+                        placeholder="Titulo"
+                        name="title-input"
+                    />
+                    <label for="password">Imagen</label>
+                    <input type="file" name="img-input" accept="image/*" />
+                    <label for="comentario">Descripcion</label>
+                    <textarea name="description-input" rows="6"></textarea>
+                    <input type="submit" value="Ingresar" id="submit-button" />
+                </form>
+            </div>
+        </div>
+        <header>
+            <h1>Titulo Pagina</h1>
+        </header>
+        <nav>
+            <h1 class="nav__title">Titulo</h1>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#">Contactos</a></li>
+                <li class="nav__item"><a href="#">Ayuda</a></li>
+                <li class="nav__item" onclick="displayModal('visible')">
+                    <a href="#">Ingresar Tarjeta</a>
+                </li>
+                <input type="text" name="search" id="search" placeholder="&#xe8b6 Pokemon" />
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="card">
+                <h3 class="card__title">Titulo</h3>
+                <img class="card__img" src="imagenes/show.png" alt="prueba" />
+                <div class="card-information">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Numquam dolores perspiciatis deserunt deleniti hic
+                        dolore ad autem odit voluptatem debitis. Veritatis
+                        pariatur eligendi dignissimos dolorem nam, porro nobis
+                        dolores soluta.
+                    </p>
+                    <ul>
+                        <li><a href="">link</a></li>
+                        <li><a href="">link</a></li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="">dsds</a>
+                    <a href="">dsakd</a>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+        <script src="Scripts/Script.js"></script>
+        <script src="Scripts/Peticiones.js"></script>
+    </body>
+</html>
