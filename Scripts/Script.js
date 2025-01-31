@@ -2,6 +2,7 @@ let contenedor = document.querySelector(".content");
 let button = document.getElementById("submit-button");
 let modalWindow = document.querySelector(".modal");
 let search = document.getElementById("search");
+//Create card using fragment
 function createCard(title, src = "../imagenes/show.png", text, l1, l2, f1) {
     let fragment = document.createDocumentFragment();
     let card = document.createElement("DIV");
@@ -31,24 +32,24 @@ function createCard(title, src = "../imagenes/show.png", text, l1, l2, f1) {
     card.appendChild(footer);
     return fragment;
 }
-
+//Create link for card
 function createInfoLink(link) {
     let item = document.createElement("LI");
     item.appendChild(createLink(link));
     return item;
 }
-
+//Asign a link to card
 function createLink(text, link = "#") {
     let newLink = document.createElement("A");
     newLink.href = link;
     newLink.innerText = text;
     return newLink;
 }
-
+//Control the display of the modal panel
 function displayModal(visibility) {
     modalWindow.style.visibility = visibility;
 }
-
+//Create a card using the form
 button.addEventListener("click", (e) => {
     e.preventDefault();
     let title = document.forms["card-form"]["title-input"].value;
@@ -95,6 +96,7 @@ button.addEventListener("click", (e) => {
     );
     displayModal("hidden");
 });
+//Use fetch to create a card using PokeApi
 search.addEventListener("keypress", (e) => {
     if (e.key != "Enter") {
         return;
@@ -123,6 +125,8 @@ search.addEventListener("keypress", (e) => {
         })
         .catch((e) => console.log("Error: " + e));
 });
+
+//Create cards from local storage
 if (localStorage.length > 0) {
     for (i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
