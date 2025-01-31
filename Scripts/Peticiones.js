@@ -1,3 +1,4 @@
+//Request usig Ajax
 /*peticion = new XMLHttpRequest();
 peticion.addEventListener("load", () => {
     console.log(JSON.parse(peticion.response));
@@ -5,7 +6,8 @@ peticion.addEventListener("load", () => {
 peticion.open("GET", "https://pokeapi.co/api/v2/pokemon/ditto");
 peticion.send();
 */
-/*
+//Request using fetch
+/*0
     peticion = fetch("https://pokeapi.co/api/v2/pokemon/ditto");
     peticion
         .then((res) => res.json())
@@ -15,5 +17,7 @@ peticion.send();
             let sprite = data.sprites["front_default"];
         });
 */
-
-alert("Prueba en github");
+//request using axios
+axios("https://pokeapi.co/api/v2/pokemon/ditto").then((res) =>
+    console.log(res)
+);
